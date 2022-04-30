@@ -1,7 +1,7 @@
 <template>
   <div class="dropdown">
     <button @click="dropFunction()" class="dropbtn">NAME</button>
-      <div id="myDropdown" class="dropdown-content">
+      <div id="myDropdown" class="dropdown-content" @click="handleChange">
         <router-link to="/">Home</router-link>
         <router-link to="/projects">Projects</router-link>
         <router-link to="/contact">Contact</router-link>
@@ -24,7 +24,7 @@
         let dropdowns = document.getElementsByClassName("dropdown-content");
         let i;
         for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
+          let openDropdown = dropdowns[i];
           if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
@@ -37,7 +37,7 @@
 
 <style>
 .dropbtn {
-  color: white;
+  color: rgb(208, 155, 155);
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -51,9 +51,7 @@
 .dropdown {
   display: flex;
   flex-direction: column;
-  justify-content: left;
   text-align: left;
-  position: relative;
 }
 
 .drop-down-content {
