@@ -2,11 +2,11 @@
   <div class="project">
     <!-- <img src="../assets/project3-photo.png" alt="Project3-photo"> -->
     <div>
-      <!-- <h1><a href="">PROJECT NAME</a></h1> -->
+      <h1><a href="">PROJECT THREE NAME</a></h1>
       <p>About this project</p>
       <div class="project-resource">
-        <!-- <h4><a href="">Deployed Site</a></h4>
-        <p><a href="">GitHub Repository</a></p> -->
+        <h4><a href="">Deployed Site</a></h4>
+        <p><a href="">GitHub Repository</a></p>
       </div>
     </div>
     <div class="tech-used">
