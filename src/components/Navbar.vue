@@ -1,7 +1,7 @@
 <template>
   <div class="dropdown">
     <button @click="dropFunction()" class="dropbtn">NAME</button>
-      <div id="myDropdown" class="dropdown-content" @click="handleChange">
+      <div id="myDropdown" class="dropdown-content" @click="handleClick()">
         <router-link to="/">Home</router-link>
         <router-link to="/projects">Projects</router-link>
         <router-link to="/contact">Contact</router-link>
@@ -21,16 +21,16 @@
       }, 
       handleClick(e) {
         if (!e.target.matches('.dropbtn')) {
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        let i;
-        for (i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+          let dropdowns = document.getElementsByClassName("dropdown-content");
+          let i;
+          for (i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
       }
-    }
-  }
-}
     }
   }
 </script>
