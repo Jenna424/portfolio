@@ -1,41 +1,42 @@
 <template>
-  <div class="drop-down">
-    <!-- <button @click="dropFunction()" class="drop-button">NAME</button> -->
-      <nav class="drop-down-content">
+  <div class="dropdown">
+    <button @click="dropFunction()" class="dropbtn">NAME</button>
+      <div id="myDropdown" class="dropdown-content">
         <router-link to="/">Home</router-link>
         <router-link to="/projects">Projects</router-link>
         <router-link to="/contact">Contact</router-link>
         <router-link to="/resume">Resume</router-link>
-      </nav>
+      </div>
   </div>
 </template>
 
+// refereced: https://www.w3schools.com/howto/howto_js_dropdown.asp
+
 <script>
   export default {
-    name: 'NavBar'
-    // methods: {
-      // dropFunction() {
-      //   document.getElementById("myDropdown").classList.toggle("show");
-      // }, 
-      // window.onclick = function(event) {
-      //   if (!event.target.matches('.dropbtn')) {
-      //   var dropdowns = document.getElementsByClassName("dropdown-content");
-      //   var i;
-      //   for (i = 0; i < dropdowns.length; i++) {
-      //     var openDropdown = dropdowns[i];
-      //     if (openDropdown.classList.contains('show')) {
-      //   openDropdown.classList.remove('show');
-//       }
-//     }
-//   }
-// }
-    // }, 
+    name: 'NavBar',
+    methods: {
+      dropFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }, 
+      handleClick(e) {
+        if (!e.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    }
   }
 </script>
 
 <style>
-/* .dropbtn {
-  background-color: #3498DB;
+.dropbtn {
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -44,15 +45,18 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: #c5d7e1;
 }
 
 .dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
   position: relative;
-  display: inline-block;
 }
 
-.dropdown-content {
+.drop-down-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -69,7 +73,7 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: rgb(243, 220, 220);}
 
-.show {display: block;} */
+.show {display: block;}
 </style>
