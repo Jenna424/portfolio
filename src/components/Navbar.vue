@@ -1,40 +1,40 @@
 <template>
   <div class="drop-down">
-    <button @click="dropFunction()" class="drop-button">NAME</button>
-      <div class="drop-down-content">
+    <!-- <button @click="dropFunction()" class="drop-button">NAME</button> -->
+      <nav class="drop-down-content">
         <router-link to="/">Home</router-link>
         <router-link to="/projects">Projects</router-link>
         <router-link to="/contact">Contact</router-link>
         <router-link to="/resume">Resume</router-link>
-      </div>
+      </nav>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'NavBar', 
-    methods: {
-      dropFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }, 
-      window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-    }, 
+    name: 'NavBar'
+    // methods: {
+      // dropFunction() {
+      //   document.getElementById("myDropdown").classList.toggle("show");
+      // }, 
+      // window.onclick = function(event) {
+      //   if (!event.target.matches('.dropbtn')) {
+      //   var dropdowns = document.getElementsByClassName("dropdown-content");
+      //   var i;
+      //   for (i = 0; i < dropdowns.length; i++) {
+      //     var openDropdown = dropdowns[i];
+      //     if (openDropdown.classList.contains('show')) {
+      //   openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
+    // }, 
   }
 </script>
 
 <style>
-.dropbtn {
+/* .dropbtn {
   background-color: #3498DB;
   color: white;
   padding: 16px;
@@ -71,5 +71,5 @@
 
 .dropdown a:hover {background-color: #ddd;}
 
-.show {display: block;}
+.show {display: block;} */
 </style>
