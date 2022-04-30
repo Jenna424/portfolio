@@ -7,12 +7,22 @@
       <h3>Hello there!</h3>
       <p>I am a full-stack web developer</p>
     </div>
+    <div>
+      Scroll to see more of my work!
+    </div>
+  </div>
+  <div class="project=page">
+    <ProjectPage />
   </div>
 </template>
 
 <script>
+import ProjectPage from './ProjectPage.vue'
   export default {
-    name: 'HomePage'
+    name: 'HomePage', 
+    components: {
+      ProjectPage
+    }
   }
 </script>
 
