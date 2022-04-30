@@ -2,7 +2,7 @@
   <div class="project">
     <!-- <img src="../assets/project2-photo.png" alt="Project2-photo"> -->
     <div>
-      <h1><a href="">PROJECT NAME</a></h1>
+      <!-- <h1><a href="">PROJECT NAME</a></h1> -->
       <p>About this project</p>
       <div class="project-resource">
         <!-- <h4><a href="">Deployed Site</a></h4>
