@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-page">
     <div class="profile-image">
       <!-- <img src="./assets/image.jpeg" alt="profile-image" /> -->
     </div>
@@ -27,4 +27,8 @@ import ProjectPage from './ProjectPage.vue'
 </script>
 
 <style>
+  .home-page {
+    height: 100vh;
+    width: 100vw;
+  }
 </style>
