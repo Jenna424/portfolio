@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="project-page">
     <div class="introduction">
       <h3>Projects</h3>
       <p>A continuously updated project site. Click to view more details</p>
@@ -31,4 +31,8 @@ import ProjectFour from '../components/ProjectFour.vue'
 </script>
 
 <style>
+ .project-page {
+   height: 100vh;
+   width: 100vw;
+ }
 </style>

@@ -1,13 +1,15 @@
 <template>
-  <div class="dropdown">
-    <button @click="dropFunction()" class="dropbtn">NAME</button>
-      <div id="myDropdown" class="dropdown-content" @click="handleClick()">
-        <router-link to="/">Home</router-link>
-        <router-link to="/projects">Projects</router-link>
-        <router-link to="/contact">Contact</router-link>
-        <router-link to="/resume">Resume</router-link>
-      </div>
-  </div>
+  <dialog class="dropdown-container">
+    <button @click="dropFunction" class="dropbtn">NAME</button>
+    <div class="dropdown" v-if="isListOpen" id="myDropdown"  @click="handleClick">
+      <router-link to="/">Home</router-link>
+      <router-link to="/projects">Projects</router-link>
+      <router-link to="/contact">Contact</router-link>
+      <router-link to="/resume">Resume</router-link>
+    </div>
+
+    
+  </dialog>
 </template>
 
 // refereced: https://www.w3schools.com/howto/howto_js_dropdown.asp
@@ -15,27 +17,28 @@
 <script>
   export default {
     name: 'NavBar',
+    data: () => ({
+        isListOpen: false
+    }),
     methods: {
-      dropFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }, 
-      handleClick(e) {
-        if (!e.target.matches('.dropbtn')) {
-          let dropdowns = document.getElementsByClassName("dropdown-content");
-          let i;
-          for (i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
+        dropFunction() {
+            this.isListOpen = !this.isListOpen
         }
-      }
     }
+  
   }
 </script>
 
 <style>
+
+.dropdown-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  text-align: left;
+  border: 0;
+}
 .dropbtn {
   color: rgb(208, 155, 155);
   padding: 16px;
@@ -51,7 +54,9 @@
 .dropdown {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  justify-content: start;
+  align-self: flex-start;
+  z-index: 2;
 }
 
 .drop-down-content {
